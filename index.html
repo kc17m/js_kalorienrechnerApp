@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/sass/main.css">
+    <title>js Kalorienrechner-App</title>
+</head>
+
+<body>
+    <main>
+
+        <fieldset>
+            <h2>App 🍔<h2>
+                    <h1>Kalorienrechner</h1>
+                    <form action="" onsubmit="return false">
+
+                        <label for="inputSize">
+                            <h3>Korpergröße in cm</h3>
+                        </label>
+                        <input type="text" name="inputSize" id="inputSize">
+                        <label for="inputAge">
+                            <h3>Alter</h3>
+                        </label>
+                        <input type="text" name="inputAge" id="inputAge">
+                        <label for="inputWeight">
+                            <h3>Gewicht in kg</h3>
+                        </label>
+                        <input type="text" name="inputWeight" id="inputWeight">
+
+
+                        <br>
+                        <label id="gender" for="gender">
+                            <h3>Geschlecht</h3>
+                        </label>
+                        <input type="radio" name="gender" id="male">
+                        <label for="male">Männlich</label>
+                        <br>
+                        <input type="radio" name="gender" id="female">
+                        <label for="female">Weiblich</label>
+                        <br><br>
+                        <label for="activity">
+                            <h3>Arbeits- und Freizeitaktivität</h3>
+                        </label>
+
+                        <select name="activity" id="act">
+                            <option value=".95">Schlafen</option>
+                            <option value="1.2">Nur Sitzen oder Liegen</option>
+                            <option value="1.5">Ausschließlich sitzende Tätigkeit</option>
+                            <option value="1.7">Sitzende Tätigkeit</option>
+                            <option value="1.9">Überwiegend gehende oder stehende Tätigkeit</option>
+                            <option value="2.2">Körperlich anstrengende Tätigkeit</option>
+                        </select>
+
+
+                        <button type="button" name="separate" onclick="calc()" id="separate">Berechnen</button>
+
+                        <h3>Ausgabe</h3>
+                        <div class="output">
+                            <div></div>
+                            <div>kcal</div>
+                            <div>kj</div>
+                            <div>Grundumsatz</div>
+                            <div id="kcal_base"></div>
+                            <div id="kj_base"></div>
+                            <div>Gesamtumsatz</div>
+                            <div id="kcal_total"></div>
+                            <div id="kj_total"></div>
+                        </div>
+                        <div>
+                            <p>Das Ergebnis des Rechners sollten Sie als Orientierungswert betrachten, da
+                                verschiedene Fehlermöglichkeiten zu berücksichtigen sind, wie abweichender
+                                Grundumsatz, falsche Zeiteinschätzung etc.
+                            </p>
+                        </div>
+                    </form>
+        </fieldset>
+    </main>
+
+
+
+    <script src="assets/js/main.js"></script>
+    <script src="https://kit.fontawesome.com/97f8f2a2f5.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
